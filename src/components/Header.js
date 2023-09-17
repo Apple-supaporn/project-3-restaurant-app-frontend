@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-function ColorSchemesExample() {
+function Header() {
   return (
     <>
       <Navbar bg="light" data-bs-theme="dark" className='sticky-top'>
@@ -20,4 +20,4 @@ function ColorSchemesExample() {
   );
 }
 
-export default ColorSchemesExample;
+export default Header;
