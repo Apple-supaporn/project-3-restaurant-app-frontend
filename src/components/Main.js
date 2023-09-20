@@ -9,10 +9,18 @@ const Main = (props) => {
 
     //This part of frontend code (line 13-21) communicates with the backend on port 4000 to get data
     //if production/deployment put this SENSITIVE URL in your .env file
+    
     const URL = 'http://localhost:4000/restaurant/'  //make sure to have an ending
 
+
+
+
+    //const baseURL = 'http://localhost:4000' //new
+    //const restaurantURL = `${baseURL}/restaurant`; //new
+    //const menuURL = `${baseURL}/menu`; //new
+
     const getMenu = async () => {
-        const response = await fetch(URL)
+        const response = await fetch(menuURL)
         const data = await response.json()
         console.log(data)
         // setMenu(data)
@@ -20,7 +28,7 @@ const Main = (props) => {
     }
 
     const createMenu = async (menu) => {
-        await fetch(URL, {
+        await fetch(menuURL, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -32,7 +40,7 @@ const Main = (props) => {
     }
     const updateMenu = async (menu, id) => {
         // Make a PUT request to update a menu item
-        const response = await fetch(URL + id, {
+        const response = await fetch(menuURL + id, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json",
@@ -43,7 +51,7 @@ const Main = (props) => {
         getMenu()
     }
     const deleteMenu = async(id)=> {
-        await fetch (URL + id, {
+        await fetch (menuURL + id, {
             method: "DELETE"
         })
         // Update the menu list after deleting a menu item
