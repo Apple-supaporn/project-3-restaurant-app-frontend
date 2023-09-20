@@ -8,8 +8,8 @@ const Show = (props) => {
     const params = useParams() // can use /:id now
     const id = params.id
     const menu = props.menu
-    menu = menu?.find((p) => p._id === id) 
-    
+    const menuItem = menu?.find((p) => p._id === id) 
+
     const newForm = {
         name: "",
         description: "",
@@ -49,12 +49,12 @@ const Show = (props) => {
                         {menu?.name} 
                     </Card.Header.Title>
                     <Card.Content>
-                    <strong>Name: </strong>
-                        <p>{menu?.price}</p>
-                        {menu?.description ? <p>{menu?.image}</p>: ""}
-                        <p>{menu?.category}, {menu?.category} {menu?.category}</p>
-                        <p>{menu?.category}</p>
-                        <strong>Email: </strong><p>{menu?.category}</p>
+                    <strong>{menuItem?.name} </strong>
+                        <p>{menuItem?.price}</p>
+                        {menuItem?.description ? <p>{menuItem?.image}</p>: ""}
+                        <p>{menuItem?.category}, {menuItem?.category} {menuItem?.category}</p>
+                        <p>{menuItem?.category}</p>
+                        <strong>{menuItem?.price} </strong><p>{menuItem?.category}</p>
                     </Card.Content>
                 </Card.Content>
             </Card>
