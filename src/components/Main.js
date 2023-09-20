@@ -16,7 +16,7 @@ const Main = (props) => {
 
 
 
-    // const baseURL = 'http://localhost:4000' //new
+    // const baseURL = 'http://localhost:4000/' //new
     // const restaurantURL = `${baseURL}/restaurant`; //new
     // const menuURL = `${baseURL}/menu`; //new
 

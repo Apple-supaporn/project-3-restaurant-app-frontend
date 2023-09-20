@@ -32,6 +32,7 @@ const Menu = (props) => {
             > 
 
                 <h3>{menu.name} {menu.description}</h3>
+                <p> {menu.category}</p>
 
 
                 <Link to={`/menu/${menu._id}`}>
