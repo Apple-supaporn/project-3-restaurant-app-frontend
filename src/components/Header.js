@@ -9,9 +9,9 @@ function Header() {
         <Container>
           <Navbar.Brand href="home">Name</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="home">Home</Nav.Link>
-            <Nav.Link href="about">About</Nav.Link>
-            <Nav.Link href="menu">Menu</Nav.Link>
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/menu">Menu</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom"
-import About from "../pages/About";
-import Home from "../pages/Home";
 import Menu from "../pages/Menu";
+import About from "../pages/About";
+import Show from "../pages/menuShow";
+
 
 const Main = (props) => {
     const [menu, setMenu] = useState(null)
@@ -20,11 +21,16 @@ const Main = (props) => {
     // const menuURL = `${baseURL}/menu`; //new
 
     const getMenu = async () => {
+
+        try{
         const response = await fetch(URL)
         const data = await response.json()
         console.log(data)
         // setMenu(data)
         setMenu(data.data)
+        } catch (error) {
+        console.error('Error fetching menu data:', error);
+        }
     }
 
     const createMenu = async (menu) => {
@@ -62,11 +68,12 @@ const Main = (props) => {
         getMenu()
     }, [])
 
+
     return (
         <main>
             <Routes>
-                <Route path="/" element={<Home menu={menu} createMenu={createMenu}/>}/>
-                <Route path="/Menu" element={<Index menu={menu} />}/>
+                <Route path="/" element={<About menu={menu} createMenu={createMenu}/>}/>
+                <Route path="/Menu" element={<Menu menu={menu} />}/>
                 <Route path="/Menu/:id" element={<Show menu={menu} updateMenu={updateMenu} deleteMenu={deleteMenu}/>}/>
             </Routes>
         </main>

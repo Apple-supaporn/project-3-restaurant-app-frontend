@@ -15,6 +15,7 @@
 import { Content, Button } from "react-bulma-components"
 import { Link } from "react-router-dom"
 
+
 const Menu = (props) => {
     console.log(props, "OUTSIDE PROPS")
     //loaded function
