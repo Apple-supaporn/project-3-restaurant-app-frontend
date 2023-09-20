@@ -1,7 +1,3 @@
-// const Footer = () => {
-//     return <h1>Footerrrrr</h1>
-// }
-// export default Footer
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';

@@ -1,17 +1,3 @@
-// import { Content, Button } from "react-bulma-components"
-// import { Link } from "react-router-dom"
-
-// const Menu = (props) => {
-//     console.log(props, "OUTSIDE PROPS")
-//     //loaded function
-//     const loaded = () => {
-//         console.log("IN LOADED", props)
-//         return props.menus.map((menu))
-//     }
-//     return <h1>Menu Page</h1>
-// }
-// export default Menu
-
 import { Content, Button } from "react-bulma-components"
 import { Link } from "react-router-dom"
 
@@ -32,7 +18,7 @@ const Menu = (props) => {
             > 
 
                 <h3>{menu.name} {menu.description}</h3>
-                <p> {menu.category}</p>
+                <p> {menu.image}</p>
 
 
                 <Link to={`/menu/${menu._id}`}>

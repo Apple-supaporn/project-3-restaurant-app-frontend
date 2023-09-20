@@ -7,7 +7,7 @@ function Header() {
     <>
       <Navbar bg="light" data-bs-theme="dark" className='sticky-top'>
         <Container>
-          <Navbar.Brand href="home">Name</Navbar.Brand>
+          <Navbar.Brand href="home">Restaurant</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>

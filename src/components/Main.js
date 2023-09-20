@@ -11,7 +11,8 @@ const Main = (props) => {
     //This part of frontend code (line 13-21) communicates with the backend on port 4000 to get data
     //if production/deployment put this SENSITIVE URL in your .env file
     
-   const URL = 'http://localhost:4000/restaurant/'  //make sure to have an ending
+   const URL = 'http://localhost:4000'  //make sure to have an ending
+   const menuURL = `${URL}/menu`
 
 
 
@@ -23,7 +24,7 @@ const Main = (props) => {
     const getMenu = async () => {
 
         try{
-        const response = await fetch(URL)
+        const response = await fetch(menuURL)
         const data = await response.json()
         console.log(data)
         // setMenu(data)
@@ -34,7 +35,7 @@ const Main = (props) => {
     }
 
     const createMenu = async (menu) => {
-        await fetch(URL, {
+        await fetch(menuURL, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -46,7 +47,7 @@ const Main = (props) => {
     }
     const updateMenu = async (menu, id) => {
         // Make a PUT request to update a menu item
-        const response = await fetch(URL + id, {
+        const response = await fetch(menuURL + id, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json",
@@ -57,7 +58,7 @@ const Main = (props) => {
         getMenu()
     }
     const deleteMenu = async(id)=> {
-        await fetch (URL + id, {
+        await fetch (menuURL + id, {
             method: "DELETE"
         })
         // Update the menu list after deleting a menu item
@@ -72,9 +73,9 @@ const Main = (props) => {
     return (
         <main>
             <Routes>
-                <Route path="/" element={<About menu={menu} createMenu={createMenu}/>}/>
-                <Route path="/Menu" element={<Menu menu={menu} />}/>
-                <Route path="/Menu/:id" element={<Show menu={menu} updateMenu={updateMenu} deleteMenu={deleteMenu}/>}/>
+                <Route exact path="/" element={<About menu={menu} createMenu={createMenu}/>}/>
+                <Route exact path="/menu" element={<Menu menu={menu} />}/>
+                <Route path="/menu/:id" element={<Show menu={menu} updateMenu={updateMenu} deleteMenu={deleteMenu}/>}/>
             </Routes>
         </main>
     )
