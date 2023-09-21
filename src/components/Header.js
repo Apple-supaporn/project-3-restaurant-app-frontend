@@ -3,21 +3,30 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 function Header() {
+  const headerStyle = { backgroundColor: 'rgb(255, 196, 0)',}
   return (
-    <>
-      <Navbar bg="light" data-bs-theme="dark" className='sticky-top'>
+    <div>
+      <Navbar style={headerStyle} className='sticky-top'>
         <Container>
-          <Navbar.Brand href="home">Restaurant</Navbar.Brand>
+          <Navbar.Brand href="home">
+            <img 
+              src="/assets/images/logo-patxis.jpg"
+              alt="Logo"
+              width="80"
+              height="auto"
+            />
+          </Navbar.Brand>
+          
           <Nav className="me-auto">
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/menu">Menu</Nav.Link>
+            <Nav.Link href="/menu/new">Create New Menu</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
-
-    </>
-  );
+    </div>
+  )
 }
 
-export default Header;
+export default Header
