@@ -59,7 +59,7 @@ const MenuForm = (props) => {
                             <Input 
                                 name="price"
                                 value={form?.price}
-                                placeholder=" $25 "
+                                placeholder=" $20 "
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>

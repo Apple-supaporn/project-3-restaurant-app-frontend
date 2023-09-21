@@ -1,0 +1,7 @@
+.custom-container {
+    max-width: auto; /* Adjust the maximum width to make it wider */
+    height:250px;
+    background-color: rgb(14, 18, 84);
+    color: antiquewhite;
+}
+  
