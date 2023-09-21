@@ -43,11 +43,8 @@ const Show = (props) => {
     }
 
     return (
-        <>
+        <div>
             <MenuCard menu={menuItem}/>
-            {/* <Button color="danger" onClick={removeMenu}>
-                Delete
-            </Button> */}
             <section>
             <Box className="form-box">
                     <h2 className="is-size-3 has-font-weight-bold">Edit menu </h2>
@@ -103,7 +100,7 @@ const Show = (props) => {
                     </form>
                 </Box>
             </section>
-        </>
+        </div>
     )
 }
 

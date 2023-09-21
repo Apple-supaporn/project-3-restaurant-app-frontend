@@ -13,16 +13,13 @@ const MenuCard = (props) => {
                     {menuItem?.name} 
                 </Card.Header.Title>
                 <Card.Content>
-                    {/* <strong>{menuItem?.name} </strong> */}
-                    {/* <p>{menuItem?.price}</p> */}
-                    {menuItem?.description}<p>{menuItem?.category}</p> 
+                    {menuItem?.description}<p>- {menuItem?.category} -</p> 
                     <strong>{menuItem?.price} </strong>
-                    <ImageCard src={menuItem?.image} />
-                    {/* <img src={menuItem?.image}/> */}
-                    
+                    <ImageCard src={menuItem?.image} /><br />
+                    <br />
                     <Link to={`/menu/${menuItem._id}`}>
                         <Button color='text'>
-                            See More
+                            Edit
                         </Button>
                     </Link>
                 </Card.Content>

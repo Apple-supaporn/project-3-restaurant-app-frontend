@@ -12,7 +12,7 @@ function Header() {
             <img 
               src="/assets/images/logo-patxis.jpg"
               alt="Logo"
-              width="80"
+              width="120"
               height="auto"
             />
           </Navbar.Brand>
