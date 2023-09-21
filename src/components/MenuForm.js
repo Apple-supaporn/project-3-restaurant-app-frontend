@@ -1,56 +1,42 @@
 import {useParams, useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import {Card, Box, Form, Button} from 'react-bulma-components'
-import MenuCard from '../components/MenuCard'
 
 
-const Show = (props) => {
+const MenuForm = (props) => {
     const navigate = useNavigate()
-    const params = useParams() // can use /:id now
-    const id = params.id
+    const params = useParams() //can use /:id now
     const menu = props.menu
-    const menuItem = menu?.find((p) => p._id === id) 
 
     const newForm = {
         name: "",
         description: "",
         price: "",
         category: "",
-        image: ""
+        image: "",
       }
     
     const [form, setForm] = useState(menu)
-    const {Input, Field, Label} = Form;
+    const { Input, Field, Label } = Form;
 
 
     //handleChange function for the form - each keypress is an event we need to update state with
     const handleChange = (e) => {
-        setForm({...form, [e.target.name]: e.target.value })
+        setForm({ ...form, [e.target.name]: e.target.value })
     }
 
     //handle form for updating
     const handleSubmit = (e) => {
         e.preventDefault()
-        props.updateMenu(form, id)
+        props.createMenu(form)
         setForm(newForm)
-        // navigate("/menu") optional direct where you want
-    }
-
-    const removeMenu = (e) => {
-        e.preventDefault()
-        props.deleteMenu(id)
-        navigate("/menu")
+        navigate("/menu") // optional direct where you want
     }
 
     return (
-        <>
-            <MenuCard menu={menuItem}/>
-            {/* <Button color="danger" onClick={removeMenu}>
-                Delete
-            </Button> */}
-            <section>
+        <div>
             <Box className="form-box">
-                    <h2 className="is-size-3 has-font-weight-bold">Edit menu </h2>
+                <h2 className="is-size-3 has-font-weight-bold">Create New Menu </h2>
                     <form onSubmit={handleSubmit}>
                         <Field>
                             <Label>Name</Label>
@@ -96,17 +82,10 @@ const Show = (props) => {
                         <Button color="primary">
                             Submit
                         </Button>
-
-                        <Button color="danger" onClick={removeMenu}>
-                            Delete
-                        </Button>
                     </form>
-                </Box>
-            </section>
-        </>
+            </Box>
+        </div>
     )
 }
 
-
-
-export default Show
+export default MenuForm
