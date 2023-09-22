@@ -16,7 +16,7 @@ function Footer() {
             <p>Phone: (123) 456-7890</p>
           </Col>
           <Col xs={12} md={4} className="text-center">
-            <h5>- Opening Hours -</h5>
+            <h5>- Opening Hours -<br/>(all locations)</h5>
             <p>Monday - Friday: 9 AM - 9 PM</p>
             <p>Saturday - Sunday: 11 AM - 10 PM</p>
           </Col>

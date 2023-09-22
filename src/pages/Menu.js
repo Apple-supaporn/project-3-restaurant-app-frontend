@@ -8,7 +8,18 @@ const Menu = (props) => {
     //loaded function
     const loaded = () => {
         console.log("IN LOADED", props)
-        return props.menu.map((menu) => (<MenuCard menu={menu}/>))
+        return (<Content
+                    // display="flex"
+                    className="columns is-multiline"
+                    // flexDirection="row"
+                    // justifyContent="space-evenly"
+                    // alignItems="baseline"
+                    >
+                    {props.menu.map((menu) => (<MenuCard menu={menu}/>))}
+                </Content>)
+        
+        
+        
         // {
         //     return(<Content
         //         display="flex"

@@ -1,12 +1,12 @@
-import {useParams, useNavigate} from 'react-router-dom'
-import {useState} from 'react'
+import {useParams, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import {Card, Box, Form, Button} from 'react-bulma-components'
 import MenuCard from '../components/MenuCard'
 
 
 const Show = (props) => {
     const navigate = useNavigate()
-    const params = useParams() // can use /:id now
+    const params = useParams() //can use /:id now
     const id = params.id
     const menu = props.menu
     const menuItem = menu?.find((p) => p._id === id) 
@@ -17,23 +17,39 @@ const Show = (props) => {
         price: "",
         category: "",
         image: ""
-      }
+    }
     
-    const [form, setForm] = useState(menu)
+    //State form data and edit mode
+    const [form, setForm] = useState(newForm)
+    const [editing, setEditing] = useState(false);
     const {Input, Field, Label} = Form;
 
+    //Effect to update the form data when menuItem changes
+    useEffect(() => {
+        if (menuItem) {
+          setForm(menuItem);
+        }
+      }, [menuItem]);
 
-    //handleChange function for the form - each keypress is an event we need to update state with
-    const handleChange = (e) => {
+    //handleChange function - Update the form state on each input change
+    const handleChange = (e) => { 
         setForm({...form, [e.target.name]: e.target.value })
     }
 
+
+
+    const handleEdit = () => {
+        setEditing(true);  //toggles the edit state when user click edit
+      };
+
     //handle form for updating
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        props.updateMenu(form, id)
+        await props.updateMenu(form, id)
         setForm(newForm)
-        // navigate("/menu") optional direct where you want
+        setEditing(false);
+        navigate(`/menu/${id}`) 
+        //optional direct where you want
     }
 
     const removeMenu = (e) => {
@@ -54,7 +70,7 @@ const Show = (props) => {
                             <Input 
                                 name="name"
                                 value={form?.name}
-                                placeholder='Name'
+                                placeholder={menuItem?.name || 'Name'}
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -62,7 +78,7 @@ const Show = (props) => {
                             <Input 
                                 name="description"
                                 value={form?.description}
-                                placeholder='Description'
+                                placeholder={menuItem?.description || 'Description'}
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -70,7 +86,7 @@ const Show = (props) => {
                             <Input 
                                 name="price"
                                 value={form?.price}
-                                placeholder=" $25 "
+                                placeholder={menuItem?.price || 'Price'}
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -78,7 +94,7 @@ const Show = (props) => {
                             <Input 
                                 name="category"
                                 value={form?.category}
-                                placeholder='Dessert'
+                                placeholder={menuItem?.category || 'Category'}
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -86,7 +102,7 @@ const Show = (props) => {
                             <Input 
                                 name="image"
                                 value={form?.image}
-                                placeholder='Image'
+                                placeholder={menuItem?.image || 'Image'}
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         
@@ -103,7 +119,5 @@ const Show = (props) => {
         </div>
     )
 }
-
-
 
 export default Show

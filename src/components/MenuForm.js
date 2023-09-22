@@ -1,11 +1,12 @@
 import {useParams, useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import {Card, Box, Form, Button} from 'react-bulma-components'
+import { Link } from "react-router-dom";
 
 
 const MenuForm = (props) => {
     const navigate = useNavigate()
-    const params = useParams() //can use /:id now
+    //const params = useParams() //can use /:id now
     const menu = props.menu
 
     const newForm = {
@@ -18,7 +19,6 @@ const MenuForm = (props) => {
     
     const [form, setForm] = useState(menu)
     const { Input, Field, Label } = Form;
-
 
     //handleChange function for the form - each keypress is an event we need to update state with
     const handleChange = (e) => {
@@ -43,7 +43,7 @@ const MenuForm = (props) => {
                             <Input 
                                 name="name"
                                 value={form?.name}
-                                placeholder='Name'
+                                placeholder='Stromboli'
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -51,7 +51,7 @@ const MenuForm = (props) => {
                             <Input 
                                 name="description"
                                 value={form?.description}
-                                placeholder='Description'
+                                placeholder='Fresh mozzarella with choice of apple, strawberry or pineapple, baked in our sweetened dough & garnished with sauce'
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -59,7 +59,7 @@ const MenuForm = (props) => {
                             <Input 
                                 name="price"
                                 value={form?.price}
-                                placeholder=" $20 "
+                                placeholder='15'
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -75,13 +75,16 @@ const MenuForm = (props) => {
                             <Input 
                                 name="image"
                                 value={form?.image}
-                                placeholder='Image'
+                                placeholder='image.jpg'
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         
-                        <Button color="primary">
-                            Submit
-                        </Button>
+
+                        <div className="buttons is-left">
+                            <Button className="is-primary">Submit</Button> 
+                            <Link to="/menu"> <Button className="is-light">Cancel</Button> </Link>
+                        </div>
+
                     </form>
             </Box>
         </div>
