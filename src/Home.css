@@ -1,7 +1,57 @@
-.custom-container {
-    max-width: auto; /* Adjust the maximum width to make it wider */
-    height:250px;
-    background-color: rgb(14, 18, 84);
-    color: antiquewhite;
+/* .custom-container {
+    background-color: rgb(255, 105, 105);
+    color: goldenrod;
+    font-weight: bold;
+
+} */
+
+.hero {
+    font-size: 100px;
 }
-  
+
+.home-info1 p {
+    font-size: 30px;
+}
+.home-info2 p {
+    font-size: 30px;
+}
+/* INTRO */
+.home-info1 {
+    background-color: rgb(241, 241, 241);
+    color: #004832;
+}
+
+/* OUR STORY */
+.home-info2 {
+    background-color: #004832; 
+    color: goldenrod;
+}
+
+.see-menu-button a {
+    font-size: 50px;
+}
+
+.text-center h5 {
+    margin-bottom: 10px; 
+    font-weight: bold;
+  }
+
+
+@media (max-width: 700px) {
+    .hero div {
+        font-size: 30px; 
+    }
+    .home-info1 p, .home-info2 p, .see-menu-button a, .text-center p, .text-center h5  {
+        font-size: 16px;
+    }
+
+    .text-center h5 {
+        border-bottom: 1px solid goldenrod; 
+        margin-bottom: 1px;
+        margin-top: 15px;
+      }
+
+}
+
+
+
