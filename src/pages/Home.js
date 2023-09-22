@@ -8,8 +8,9 @@ const Home = () => {
             {/* first pic */}
             <section className="hero">
                 <div class="hero-image" style={{ position: 'relative' }}>
-                    <img src="https://images.unsplash.com/photo-1634629377376-6c6bae2d8bcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80" alt="Restaurant Name"/>
-                        <div style={{
+                    <img src="https://images.unsplash.com/photo-1634629377376-6c6bae2d8bcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80" alt="pizza1"/>
+                        <div
+                        style={{
                             position: 'absolute',
                             top: '50px',
                             left: '0',
@@ -20,11 +21,15 @@ const Home = () => {
                             textAlign: 'center',}}>
                             
                             EAT  ENJOY  REPEAT<br />
-                            <div className="see-menu-button">
-                                <Link to="/menu">SEE MENU</Link>
-                            </div>
+                            
+                                <div className="see-menu-button">
+                                    <Link to="/menu" className="button is-light">SEE MENU</Link>
+                                </div>
+                            
                         </div>
                 </div>
+
+
             
                 {/* picture and story */}
                 <div class="home-info1">
@@ -34,7 +39,7 @@ const Home = () => {
                 </div>
                 <div class="home-info">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1646656352194-7db15ee021bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Restaurant Name" />
+                        <img src="https://images.unsplash.com/photo-1646656352194-7db15ee021bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="pizza2" />
                     </div>
                 </div>
 
@@ -70,4 +75,5 @@ const Home = () => {
 }
 
 export default Home;
+
 
