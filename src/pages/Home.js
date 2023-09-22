@@ -7,30 +7,34 @@ const Home = () => {
         <div className="home-grid">
             {/* first pic */}
             <section className="hero">
-                <div class="hero-image" style={{ position: 'relative' }}>
+                <div style={{ position: 'relative' }}>
                     <img src="https://images.unsplash.com/photo-1634629377376-6c6bae2d8bcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80" alt="pizza1"/>
-                        <div
-                        style={{
-                            position: 'absolute',
-                            top: '50px',
-                            left: '0',
-                            right: '0',
-                            backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                            color: 'white',
-                            padding: '10px',
-                            textAlign: 'center',}}>
-                            
-                            EAT  ENJOY  REPEAT<br />
-                            
+                    <div
+                            // class="custom-container"
+                            className="is-flex"
+                            style={{
+                                flexDirection:"column",
+                                position: 'absolute',
+                                top: '30%',
+                                left: "0px",
+                                right: "0px",
+                                height: "40%",
+                                // rem vh vw %
+                                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                                color: 'white',
+                                // padding: '3rem',
+                                paddingTop: "5%",
+                                textAlign: 'center'
+                            }}>
+                                <a>EAT  ENJOY  REPEAT</a>
                                 <div className="see-menu-button">
                                     <Link to="/menu" className="button is-light">SEE MENU</Link>
                                 </div>
-                            
-                        </div>
+                        
+                    </div>
                 </div>
 
 
-            
                 {/* picture and story */}
                 <div class="home-info1">
                     <div class="container-fluid text-center" style={{paddingTop: 'calc(100vmax / 10)', paddingBottom: 'calc(100vmax / 10)'}}>

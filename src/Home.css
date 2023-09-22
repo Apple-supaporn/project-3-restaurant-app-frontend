@@ -6,11 +6,13 @@
 } */
 
 .hero {
-    font-size: 100px;
+    /* font-size: 100px; */
+    font-size: 2rem; 
 }
 
-/* .hero-image {
-    padding-top: 200px;
+/* .hero div {
+    position: relative;
+    border: 3px solid #73AD21;
 } */
 
 
@@ -45,14 +47,16 @@
 
 @media (max-width: 700px) {
     .hero div {
-        font-size: 30px; 
+        /* font-size: 30px;  */
+        font-size: 2rem; 
+
     }
     .home-info1 p, .home-info2 p, .see-menu-button a, .text-center p, .text-center h5  {
         font-size: 16px;
     }
 
     .text-center h5 {
-        border-bottom: 1px solid goldenrod; 
+        /* border-bottom: 1px solid goldenrod;  */
         margin-bottom: 1px;
         margin-top: 15px;
 
@@ -62,6 +66,13 @@
         
     }
 }
+
+/* @media (min-width: 700px) {
+    .custom-container {
+        top: 5rem !important; */
+        /* top: 300px !important;
+    }
+} */
 
 
 
