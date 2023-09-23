@@ -4,7 +4,7 @@ import {Card, Box, Form, Button} from 'react-bulma-components'
 import LocationCard from '../components/LocationCard'
 
 
-const showLocation = (props) => {
+const ShowLocation = (props) => {
     const navigate = useNavigate()
     const params = useParams() //can use /:id now
     const id = params.id
@@ -129,4 +129,4 @@ const showLocation = (props) => {
     )
 }
 
-export default showLocation
+export default ShowLocation

@@ -8,7 +8,7 @@ const LocationForm = (props) => {
     const navigate = useNavigate()
     const params = useParams() //can use /:id now
     const location = props.location
-    
+
 
     const newForm = {
         name: "",
@@ -35,7 +35,9 @@ const LocationForm = (props) => {
         navigate("/location") // optional direct where you want
     }
 
+    
     return (
+       
         <div>
             <Box className="form-box">
                 <h2 className="is-size-3 has-font-weight-bold">Create New Location </h2>
@@ -45,7 +47,7 @@ const LocationForm = (props) => {
                             <Input 
                                 name="name"
                                 value={form?.name}
-                                placeholder='Stromboli'
+                                placeholder='PATXI’S CAMPBELL'
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>

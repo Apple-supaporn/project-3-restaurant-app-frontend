@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import Menu from "../pages/Menu";
 import Location from "../pages/Location";
 import Show from "../pages/menuShow";
-import showLocation from "../pages/locationShow";
+import ShowLocation from "../pages/locationShow";
 import Home from "../pages/Home";
 import NewMenu from "../pages/newMenu";
 import NewLocation from "../pages/newLocation";
@@ -129,7 +129,7 @@ const Main = (props) => {
 
                 <Route exact path="/location/new" element={<NewLocation createLocation={createLocation}/>} />
                 <Route exact path="/location" element={<Location location={location} />}/>
-                <Route path="/location/:id" element={<showLocation location={location} updateLocation={updateLocation} deleteLocation={deleteLocation}/>}/>
+                <Route path="/location/:id" element={<ShowLocation location={location} updateLocation={updateLocation} deleteLocation={deleteLocation}/>}/>
             </Routes>
         </main>
     )
