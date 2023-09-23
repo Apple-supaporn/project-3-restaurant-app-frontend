@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const MenuForm = (props) => {
     const navigate = useNavigate()
-    //const params = useParams() //can use /:id now
+    const params = useParams() //can use /:id now
     const menu = props.menu
 
     const newForm = {

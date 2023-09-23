@@ -7,8 +7,8 @@ const MenuCard = (props) => {
     const menuItem = props.menu
 
     // const cardStyle = {
-    //     width: 'calc(25% - 20px)', // 4 cards per row with 20px gap
-    //     margin: '10px', // Adjust margin as needed
+    //     width: 'calc(25% - 20px)',
+    //     margin: '10px', 
     //   };
     
     return (    
