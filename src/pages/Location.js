@@ -1,6 +1,6 @@
-// import { Content, Button } from "react-bulma-components"
-// import { Link } from "react-router-dom"
-import LocationCard from '../components/LocationCard'
+import { Content, Button } from "react-bulma-components"
+import { Link } from "react-router-dom"
+import LocationCard from "../components/LocationCard"
 
 
 const Location = (props) => {
@@ -8,7 +8,18 @@ const Location = (props) => {
     //loaded function
     const loaded = () => {
         console.log("IN LOADED", props)
-        return props.location.map((location) => (<LocationCard location={location}/>))
+        return (<Content
+                    // display="flex"
+                    className="columns is-multiline"
+                    // flexDirection="row"
+                    // justifyContent="space-evenly"
+                    // alignItems="baseline"
+                    >
+                    {props.location.map((location) => (<LocationCard location={location}/>))}
+                </Content>)
+        
+        
+        
         // {
         //     return(<Content
         //         display="flex"
@@ -19,12 +30,12 @@ const Location = (props) => {
         //         className="has-background-grey-lighter person-content"
         //     > 
 
-        //         <h3>{menu.name} {menu.description}</h3>
-        //         <img src={menu.image} width="5%" height="auto"/>
-        //         {/* <p> {menu.image}</p> */}
+        //         <h3>{location.name} {location.description}</h3>
+        //         <img src={location.image} width="5%" height="auto"/>
+        //         {/* <p> {location.image}</p> */}
 
 
-        //         <Link to={`/menu/${menu._id}`}>
+        //         <Link to={`/location/${location._id}`}>
         //             <Button color='text'>
         //                 See More
         //             </Button>

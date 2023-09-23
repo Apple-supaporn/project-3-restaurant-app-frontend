@@ -69,7 +69,7 @@ const Home = () => {
 
                                 When you sit down at our table, you’re family!<br /><br />
                             
-                                <Link to="/about">SEE OUR LOCATIONS</Link>
+                                <Link to="/location">SEE OUR LOCATIONS</Link>
                         </p>
                     </div>
                 </div>

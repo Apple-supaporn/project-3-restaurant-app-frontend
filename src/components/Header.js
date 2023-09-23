@@ -19,9 +19,10 @@ function Header() {
           
           <Nav className="me-auto">
             <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/location">Location</Nav.Link>
+            <Nav.Link href="/location">Locations</Nav.Link>
             <Nav.Link href="/menu">Menu</Nav.Link>
             <Nav.Link href="/menu/new">Create New Menu</Nav.Link>
+            <Nav.Link href="/location/new">Create New Location</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

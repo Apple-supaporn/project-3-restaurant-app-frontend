@@ -3,8 +3,10 @@ import { Route, Routes } from "react-router-dom"
 import Menu from "../pages/Menu";
 import Location from "../pages/Location";
 import Show from "../pages/menuShow";
+import ShowLocation from "../pages/locationShow";
 import Home from "../pages/Home";
 import NewMenu from "../pages/newMenu";
+import NewLocation from "../pages/newLocation";
 
 
 const Main = (props) => {
@@ -80,38 +82,38 @@ const Main = (props) => {
         }
     }
 
-    // const createLocation = async (location) => {
-    //     await fetch(locationURL, {
-    //         method: 'POST',
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(location)
-    //     })
-    //     //update list of menus after adding new menu
-    //     getLocation()
-    // }
+    const createLocation = async (location) => {
+        await fetch(locationURL, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(location)
+        })
+        //update list of menus after adding new menu
+        getLocation()
+    }
 
-    // const updateLocation = async (location, id) => {
-    //     // Make a PUT request to update a menu item
-    //     await fetch(`${locationURL}/${id}`, {
-    //         method: 'PUT',
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(location)
-    //     })
-    //     //update the menu list
-    //     getLocation()
-    // }
+    const updateLocation = async (location, id) => {
+        // Make a PUT request to update a menu item
+        await fetch(`${locationURL}/${id}`, {
+            method: 'PUT',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(location)
+        })
+        //update the menu list
+        getLocation()
+    }
 
-    // const deleteLocation = async(id)=> {
-    //     await fetch (`${locationURL}/${id}`, {
-    //         method: "DELETE"
-    //     })
-    //     // Update the menu list after deleting a menu item
-    //     getLocation()
-    // }
+    const deleteLocation = async(id)=> {
+        await fetch (`${locationURL}/${id}`, {
+            method: "DELETE"
+        })
+        // Update the menu list after deleting a menu item
+        getLocation()
+    }
 
     useEffect(() => {
         getLocation()
@@ -125,9 +127,9 @@ const Main = (props) => {
                 <Route exact path="/menu" element={<Menu menu={menu} />}/>
                 <Route path="/menu/:id" element={<Show menu={menu} updateMenu={updateMenu} deleteMenu={deleteMenu}/>}/>
 
-                {/* <Route exact path="/location/new" element={<Newlocation createlocation={createlocation}/>} /> */}
+                <Route exact path="/location/new" element={<NewLocation createLocation={createLocation}/>} />
                 <Route exact path="/location" element={<Location location={location} />}/>
-                {/* <Route path="/location/:id" element={<Show location={location} updatelocation={updatelocation} deletelocation={deletelocation}/>}/> */}
+                <Route path="/location/:id" element={<ShowLocation location={location} updateLocation={updateLocation} deleteLocation={deleteLocation}/>}/>
             </Routes>
         </main>
     )
