@@ -13,7 +13,7 @@ const Main = (props) => {
     const [menu, setMenu] = useState(null)
     const [location, setLocation] = useState(null)
     
-    const URL = 'https://project-3-restaurant-app-23d4c9faecd5.herokuapp.com/'  //make sure to have an ending
+    const URL = 'https://project-3-restaurant-app-23d4c9faecd5.herokuapp.com'  //make sure to have an ending
     const menuURL = `${URL}/menu`
     const locationURL = `${URL}/restaurant`
 
