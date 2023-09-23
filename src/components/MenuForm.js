@@ -1,76 +1,49 @@
-import {useParams, useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import {useParams, useNavigate} from 'react-router-dom'
+import {useState} from 'react'
 import {Card, Box, Form, Button} from 'react-bulma-components'
-import MenuCard from '../components/MenuCard'
+import { Link } from "react-router-dom";
 
 
-const Show = (props) => {
+const MenuForm = (props) => {
     const navigate = useNavigate()
     const params = useParams() //can use /:id now
-    const id = params.id
     const menu = props.menu
-    const menuItem = menu?.find((p) => p._id === id) 
 
     const newForm = {
         name: "",
         description: "",
         price: "",
         category: "",
-        image: ""
-    }
+        image: "",
+      }
     
-    //State form data and edit mode
-    const [form, setForm] = useState(newForm)
-    const [editing, setEditing] = useState(false);
-    const {Input, Field, Label} = Form;
+    const [form, setForm] = useState(menu)
+    const { Input, Field, Label } = Form;
 
-    //Effect to update the form data when menuItem changes
-    useEffect(() => {
-        if (menuItem) {
-          setForm(menuItem);
-        }
-      }, [menuItem]);
-
-    //handleChange function - Update the form state on each input change
-    const handleChange = (e) => { 
-        setForm({...form, [e.target.name]: e.target.value })
+    //handleChange function for the form - each keypress is an event we need to update state with
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value })
     }
-
-
-
-    const handleEdit = () => {
-        setEditing(true);  //toggles the edit state when user click edit
-      };
 
     //handle form for updating
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
-        await props.updateMenu(form, id)
+        props.createMenu(form)
         setForm(newForm)
-        setEditing(false);
-        navigate(`/menu/${id}`) 
-        //optional direct where you want
-    }
-
-    const removeMenu = (e) => {
-        e.preventDefault()
-        props.deleteMenu(id)
-        navigate("/menu")
+        navigate("/menu") // optional direct where you want
     }
 
     return (
         <div>
-            <MenuCard menu={menuItem}/>
-            <section>
             <Box className="form-box">
-                    <h2 className="is-size-3 has-font-weight-bold">Edit menu </h2>
+                <h2 className="is-size-3 has-font-weight-bold">Create New Menu </h2>
                     <form onSubmit={handleSubmit}>
                         <Field>
                             <Label>Name</Label>
                             <Input 
                                 name="name"
                                 value={form?.name}
-                                placeholder={menuItem?.name || 'Name'}
+                                placeholder='Stromboli'
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -78,7 +51,7 @@ const Show = (props) => {
                             <Input 
                                 name="description"
                                 value={form?.description}
-                                placeholder={menuItem?.description || 'Description'}
+                                placeholder='Fresh mozzarella with choice of apple, strawberry or pineapple, baked in our sweetened dough & garnished with sauce'
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -86,7 +59,7 @@ const Show = (props) => {
                             <Input 
                                 name="price"
                                 value={form?.price}
-                                placeholder={menuItem?.price || 'Price'}
+                                placeholder='15'
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -94,7 +67,7 @@ const Show = (props) => {
                             <Input 
                                 name="category"
                                 value={form?.category}
-                                placeholder={menuItem?.category || 'Category'}
+                                placeholder='Dessert'
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -102,22 +75,20 @@ const Show = (props) => {
                             <Input 
                                 name="image"
                                 value={form?.image}
-                                placeholder={menuItem?.image || 'Image'}
+                                placeholder='image.jpg'
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         
-                        <Button color="primary">
-                            Submit
-                        </Button>
 
-                        <Button color="danger" onClick={removeMenu}>
-                            Delete
-                        </Button>
+                        <div className="buttons is-left">
+                            <Button className="is-primary">Submit</Button> 
+                            <Link to="/menu"> <Button className="is-light">Cancel</Button> </Link>
+                        </div>
+
                     </form>
-                </Box>
-            </section>
+            </Box>
         </div>
     )
 }
 
-export default Show
+export default MenuForm

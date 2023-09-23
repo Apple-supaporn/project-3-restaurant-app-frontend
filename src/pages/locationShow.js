@@ -1,35 +1,36 @@
 import {useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import {Card, Box, Form, Button} from 'react-bulma-components'
-import MenuCard from '../components/MenuCard'
+import LocationCard from '../components/LocationCard'
 
 
-const Show = (props) => {
+const ShowLocation = (props) => {
     const navigate = useNavigate()
     const params = useParams() //can use /:id now
     const id = params.id
-    const menu = props.menu
-    const menuItem = menu?.find((p) => p._id === id) 
+    const location = props.location
+    const locationItem = location?.find((p) => p._id === id) 
 
     const newForm = {
         name: "",
         description: "",
-        price: "",
-        category: "",
-        image: ""
-    }
+        address: "",
+        phone: "",
+        hours: "",
+        image:""
+      }
     
     //State form data and edit mode
     const [form, setForm] = useState(newForm)
     const [editing, setEditing] = useState(false);
     const {Input, Field, Label} = Form;
 
-    //Effect to update the form data when menuItem changes
+    //Effect to update the form data when locationItem changes
     useEffect(() => {
-        if (menuItem) {
-          setForm(menuItem);
+        if (locationItem) {
+          setForm(locationItem);
         }
-      }, [menuItem]);
+      }, [locationItem]);
 
     //handleChange function - Update the form state on each input change
     const handleChange = (e) => { 
@@ -45,32 +46,32 @@ const Show = (props) => {
     //handle form for updating
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await props.updateMenu(form, id)
+        await props.updateLocation(form, id)
         setForm(newForm)
         setEditing(false);
-        navigate(`/menu/${id}`) 
+        navigate(`/location/${id}`) 
         //optional direct where you want
     }
 
-    const removeMenu = (e) => {
+    const removeLocation = (e) => {
         e.preventDefault()
-        props.deleteMenu(id)
-        navigate("/menu")
+        props.deleteLocation(id)
+        navigate("/location")
     }
 
     return (
         <div>
-            <MenuCard menu={menuItem}/>
+            <LocationCard location={locationItem}/>
             <section>
             <Box className="form-box">
-                    <h2 className="is-size-3 has-font-weight-bold">Edit menu </h2>
+                    <h2 className="is-size-3 has-font-weight-bold">Edit location </h2>
                     <form onSubmit={handleSubmit}>
                         <Field>
                             <Label>Name</Label>
                             <Input 
                                 name="name"
                                 value={form?.name}
-                                placeholder={menuItem?.name || 'Name'}
+                                placeholder={locationItem?.name || 'Name'}
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -78,23 +79,31 @@ const Show = (props) => {
                             <Input 
                                 name="description"
                                 value={form?.description}
-                                placeholder={menuItem?.description || 'Description'}
+                                placeholder={locationItem?.description || 'Description'}
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
-                            <Label>Price</Label>
+                            <Label>Address</Label>
                             <Input 
-                                name="price"
-                                value={form?.price}
-                                placeholder={menuItem?.price || 'Price'}
+                                name="address"
+                                value={form?.address}
+                                placeholder={locationItem?.address || 'Address'}
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
-                            <Label>Category</Label>
+                            <Label>phone</Label>
                             <Input 
-                                name="category"
-                                value={form?.category}
-                                placeholder={menuItem?.category || 'Category'}
+                                name="phone"
+                                value={form?.phone}
+                                placeholder={locationItem?.phone || 'Phone'}
+                                onChange={(e)=>{handleChange(e)}}/>
+                        </Field>
+                        <Field>
+                            <Label>Hours</Label>
+                            <Input 
+                                name="hours"
+                                value={form?.hours}
+                                placeholder={locationItem?.hours || 'Hours'}
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -102,7 +111,7 @@ const Show = (props) => {
                             <Input 
                                 name="image"
                                 value={form?.image}
-                                placeholder={menuItem?.image || 'Image'}
+                                placeholder={locationItem?.image || 'Image'}
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         
@@ -110,7 +119,7 @@ const Show = (props) => {
                             Submit
                         </Button>
 
-                        <Button color="danger" onClick={removeMenu}>
+                        <Button color="danger" onClick={removeLocation}>
                             Delete
                         </Button>
                     </form>
@@ -120,4 +129,4 @@ const Show = (props) => {
     )
 }
 
-export default Show
+export default ShowLocation
