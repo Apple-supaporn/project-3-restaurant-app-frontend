@@ -123,7 +123,7 @@ const Main = (props) => {
         <main>
             <Routes>
                 <Route exact path="/" component={Home}/>
-                {/* <Route exact path="/home" element={<Home />}/> */}
+                <Route exact path="/home" element={<Home />}/>
                 <Route exact path="/menu/new" element={<NewMenu createMenu={createMenu}/>} />
                 <Route exact path="/menu" element={<Menu menu={menu} />}/>
                 <Route path="/menu/:id" element={<Show menu={menu} updateMenu={updateMenu} deleteMenu={deleteMenu}/>}/>
