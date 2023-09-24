@@ -1,4 +1,4 @@
-/*          /index.html         200
-/home/      /home       301
-/menu/      /menu       301
-/location/      /location       301
+/*              /index.html   200
+/home/*         /home/:splat   200
+/menu/*         /menu/:splat   200
+/location/*     /location/:splat   200

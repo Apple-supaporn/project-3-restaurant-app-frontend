@@ -1,4 +1,4 @@
-# Restaurant app | MERN-stack and Full CRUD
+# [Restaurant app | MERN-stack and Full CRUD](https://rainbow-hotteok-68b1d6.netlify.app/home/)
 This restaurant web application makes it easy for restaurant owner to create and update their restaurant profiles and menus to showcase delicious food and connect with customers.
 
 ## Screenshot
