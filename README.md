@@ -2,8 +2,13 @@
 This restaurant web application makes it easy for restaurant owner to create and update their restaurant profiles and menus to showcase delicious food and connect with customers.
 
 ## Screenshot
+Landing Page
 <img src="public/assets/images/restaurant-1.png" alt="restaurant-1" width="374" height="664">
+
+Menu Page
 <img src="public/assets/images/restaurant-2.png" alt="restaurant-2" width="372" height="662">
+
+Create a New Menu Page
 <img src="public/assets/images/restaurant-3.png" alt="restaurant-3" width="374" height="667">
 
 ## Technologies Used
@@ -28,5 +33,6 @@ If you're interested in learning more about the planning and development process
 - Owner Authentication, this system ensures that only the owner can sign in and access or update their restaurant's information.
 - Create a gallery page to display pictures of restaurant's food and ambiance.
 - Improve the website design to make it more enjoyable for users.
+- Add menu sections like 'Starters', 'Salads', 'Main Courses', 'Kids Menu', 'Desserts' and 'Beverages' to make it easier for customers to find what they want on the menu.
 
 Your contributions and ideas are always welcome!
