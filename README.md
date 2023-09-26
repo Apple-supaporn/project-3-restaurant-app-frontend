@@ -2,14 +2,14 @@
 This restaurant web application makes it easy for restaurant owner to create and update their restaurant profiles and menus to showcase delicious food and connect with customers.
 
 ## Screenshot
-Landing Page
-<img src="public/assets/images/restaurant-1.png" alt="restaurant-1" width="374" height="664">
+### Landing Page
+![Landing Page](public/assets/images/restaurant-1.png)
 
-Menu Page
-<img src="public/assets/images/restaurant-2.png" alt="restaurant-2" width="372" height="662">
+### Menu Page
+![Menu Page](public/assets/images/restaurant-2.png)
 
-Create a New Menu Page
-<img src="public/assets/images/restaurant-3.png" alt="restaurant-3" width="374" height="667">
+### Create a New Menu Page
+![Create a New Menu Page](public/assets/images/restaurant-3.png)
 
 ## Technologies Used
 - MongoDB/Mongoose
