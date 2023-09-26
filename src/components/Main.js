@@ -12,14 +12,12 @@ import NewLocation from "../pages/newLocation";
 const Main = (props) => {
     const [menu, setMenu] = useState(null)
     const [location, setLocation] = useState(null)
-    
-    const URL = 'https://project-3-restaurant-app-23d4c9faecd5.herokuapp.com'  //make sure to have an ending
+
+    //It won't show data from backend if add slash '/' at the end
+    const URL = 'https://project-3-restaurant-app-23d4c9faecd5.herokuapp.com' 
     const menuURL = `${URL}/menu`
     const locationURL = `${URL}/restaurant`
 
-    // const baseURL = 'http://localhost:4000/' //new
-    // const restaurantURL = `${baseURL}/restaurant`; //new
-    // const menuURL = `${baseURL}/menu`; //new
 
     const getMenu = async () => {
         try {
@@ -127,7 +125,6 @@ const Main = (props) => {
                 <Route exact path="/menu/new" element={<NewMenu createMenu={createMenu}/>} />
                 <Route exact path="/menu" element={<Menu menu={menu} />}/>
                 <Route path="/menu/:id" element={<Show menu={menu} updateMenu={updateMenu} deleteMenu={deleteMenu}/>}/>
-
                 <Route exact path="/location/new" element={<NewLocation createLocation={createLocation}/>} />
                 <Route exact path="/location" element={<Location location={location} />}/>
                 <Route path="/location/:id" element={<ShowLocation location={location} updateLocation={updateLocation} deleteLocation={deleteLocation}/>}/>

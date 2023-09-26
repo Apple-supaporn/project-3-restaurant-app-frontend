@@ -60,7 +60,9 @@ const Show = (props) => {
 
     return (
         <div>
+            <div className="show-centered-container">
             <MenuCard menu={menuItem}/>
+            </div>
             <section>
             <Box className="form-box">
                     <h2 className="is-size-3 has-font-weight-bold">Edit menu </h2>
