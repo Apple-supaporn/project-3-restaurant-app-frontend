@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const MenuForm = (props) => {
     const navigate = useNavigate()
-    const params = useParams() //can use /:id now
+    const params = useParams()
     const menu = props.menu
 
     const newForm = {
@@ -20,17 +20,15 @@ const MenuForm = (props) => {
     const [form, setForm] = useState(menu)
     const { Input, Field, Label } = Form;
 
-    //handleChange function for the form - each keypress is an event we need to update state with
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })
     }
 
-    //handle form for updating
     const handleSubmit = (e) => {
         e.preventDefault()
         props.createMenu(form)
         setForm(newForm)
-        navigate("/menu") // optional direct where you want
+        navigate("/menu")
     }
 
     return (
@@ -79,7 +77,6 @@ const MenuForm = (props) => {
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         
-
                         <div className="buttons is-left">
                             <Button className="is-primary">Submit</Button> 
                             <Link to="/menu"> <Button className="is-light">Cancel</Button> </Link>

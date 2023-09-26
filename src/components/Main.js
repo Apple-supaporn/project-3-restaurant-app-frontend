@@ -18,13 +18,11 @@ const Main = (props) => {
     const menuURL = `${URL}/menu`
     const locationURL = `${URL}/restaurant`
 
-
     const getMenu = async () => {
         try {
             const response = await fetch(menuURL)
             const data = await response.json()
             console.log(data)
-            // setMenu(data)
             setMenu(data.data)
         } catch (error) {
         console.error('Error fetching menu data:', error);
@@ -67,7 +65,8 @@ const Main = (props) => {
     useEffect(() => {
         getMenu()
     }, [])
-// Location Functions below /////////////////////////////////
+
+    // Location Functions below /////////////////////////////////
     const getLocation = async () => {
         try {
             const response = await fetch(locationURL)
@@ -88,12 +87,10 @@ const Main = (props) => {
             },
             body: JSON.stringify(location)
         })
-        //update list of menus after adding new menu
         getLocation()
     }
 
     const updateLocation = async (location, id) => {
-        // Make a PUT request to update a menu item
         await fetch(`${locationURL}/${id}`, {
             method: 'PUT',
             headers: {
@@ -101,7 +98,6 @@ const Main = (props) => {
             },
             body: JSON.stringify(location)
         })
-        //update the menu list
         getLocation()
     }
 
@@ -109,7 +105,6 @@ const Main = (props) => {
         await fetch (`${locationURL}/${id}`, {
             method: "DELETE"
         })
-        // Update the menu list after deleting a menu item
         getLocation()
     }
 

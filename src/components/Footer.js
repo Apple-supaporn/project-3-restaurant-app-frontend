@@ -3,6 +3,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
 import "../Home.css"
+import "../App.css"
+
 
 function Footer() {
   return (
@@ -17,8 +19,8 @@ function Footer() {
           </Col>
           <Col xs={12} md={4} className="text-center">
             <h5>- Opening Hours -<br/>(all locations)</h5>
-            <p>Sunday–Thursday: 11 am to 9 pm </p>
-            <p>Sunday–Thursday: 11 am to 9 pm</p>
+            <p>Sunday-Thursday: 11 am to 9 pm </p>
+            <p>Friday-Saturday: 11 am to 9 pm</p>
           </Col>
           <Col xs={12} md={4} className="text-center">
             <h5>- Follow Us -</h5>

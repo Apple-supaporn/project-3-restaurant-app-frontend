@@ -5,13 +5,11 @@ import "../Home.css"
 const Home = () => {
     return (
         <div className="home-grid">
-            {/* first pic */}
             <section className="hero">
                 <div style={{ position: 'relative' }}>
                     <img src="https://images.unsplash.com/photo-1634629377376-6c6bae2d8bcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80" alt="pizza1"/>
                     <div
-                            // class="custom-container"
-                            className="is-flex"
+                        className="is-flex"
                             style={{
                                 flexDirection:"column",
                                 position: 'absolute',
@@ -19,13 +17,10 @@ const Home = () => {
                                 left: "0px",
                                 right: "0px",
                                 height: "40%",
-                                // rem vh vw %
                                 backgroundColor: 'rgba(0, 0, 0, 0.4)',
                                 color: 'white',
-                                // padding: '3rem',
                                 paddingTop: "5%",
                                 textAlign: 'center',
-                                // fontSize: '50px'
                             }}>
                                 <div className="eat-enjoy-repeat">EAT  ENJOY  REPEAT</div>
                                 <div className="see-menu-button">
@@ -35,11 +30,14 @@ const Home = () => {
                     </div>
                 </div>
 
-
-                {/* picture and story */}
                 <div class="home-info1">
-                    <div class="container-fluid text-center" style={{paddingTop: 'calc(100vmax / 10)', paddingBottom: 'calc(100vmax / 10)'}}>
-                        <p>Specializing in organic wood-fired cuisine, we serve straightforward food created with seasonal ingredients sourced from local farms and purveyors.</p>
+                    <div class="container-fluid text-center" 
+                    style={{ 
+                        paddingTop: 'calc(100vmax / 10)', 
+                        paddingBottom: 'calc(100vmax / 10)'}}>
+                        <p>Specializing in organic wood-fired cuisine, we serve straightforward 
+                            food created with seasonal ingredients sourced from local farms and 
+                            purveyors.</p>
                     </div>
                 </div>
                 <div class="home-info">
@@ -48,10 +46,11 @@ const Home = () => {
                     </div>
                 </div>
 
-
-                {/* Wording after first pic */}
                 <div class="home-info2">
-                    <div class="container-fluid text-center" style={{paddingTop: 'calc(80vmax / 10)', paddingBottom: 'calc(80vmax / 10)'}}>
+                    <div class="container-fluid text-center" 
+                    style={{
+                        paddingTop: 'calc(80vmax / 10)', 
+                        paddingBottom: 'calc(80vmax / 10)'}}>
                         <p>- OUR STORY -<br/><br/>
                                 The best stories in life have yummy endings<br/><br/>
 

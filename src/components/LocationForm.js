@@ -1,14 +1,13 @@
-import {useParams, useNavigate} from 'react-router-dom'
-import {useState} from 'react'
-import {Card, Box, Form, Button} from 'react-bulma-components'
+import { useParams, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { Box, Form, Button } from 'react-bulma-components'
 import { Link } from "react-router-dom";
 
 
 const LocationForm = (props) => {
     const navigate = useNavigate()
-    const params = useParams() //can use /:id now
+    const params = useParams()
     const location = props.location
-
 
     const newForm = {
         name: "",
@@ -20,7 +19,7 @@ const LocationForm = (props) => {
       }
     
     const [form, setForm] = useState(location)
-    const { Input, Field, Label } = Form;
+    const { Input, Field, Label } = Form
 
     //handleChange function for the form - each keypress is an event we need to update state with
     const handleChange = (e) => {
@@ -32,12 +31,11 @@ const LocationForm = (props) => {
         e.preventDefault()
         props.createLocation(form)
         setForm(newForm)
-        navigate("/location") // optional direct where you want
+        // optional direct where you want
+        navigate("/location")
     }
 
-    
     return (
-       
         <div>
             <Box className="form-box">
                 <h2 className="is-size-3 has-font-weight-bold">Create New Location </h2>
@@ -47,7 +45,7 @@ const LocationForm = (props) => {
                             <Input 
                                 name="name"
                                 value={form?.name}
-                                placeholder='PATXI’S CAMPBELL'
+                                placeholder="PATXI'S CAMPBELL"
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -55,8 +53,7 @@ const LocationForm = (props) => {
                             <Input 
                                 name="description"
                                 value={form?.description}
-                                placeholder='We opened our first restaurant in the summer of 2004 in Palo Alto, California!
-                                '
+                                placeholder="We opened our first restaurant in the summer of 2004 in Palo Alto, California!"
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -64,7 +61,7 @@ const LocationForm = (props) => {
                             <Input 
                                 name="address"
                                 value={form?.address}
-                                placeholder='1875 S. Bascom Ave. Campbell, CA 95008'
+                                placeholder="1875 S. Bascom Ave. Campbell, CA 95008"
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -72,7 +69,7 @@ const LocationForm = (props) => {
                             <Input 
                                 name="phone"
                                 value={form?.phone}
-                                placeholder='999-999-9999'
+                                placeholder="(999)999-9999"
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -80,24 +77,24 @@ const LocationForm = (props) => {
                             <Input 
                                 name="hours"
                                 value={form?.hours}
-                                placeholder='Sunday–Thursday: 11 am to 9 pm Friday–Saturday: 11 am to 10 pm'
+                                placeholder="Sunday-Thursday: 11 am to 9 pm Friday-Saturday: 11 am to 10 pm"
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
-                        
                         <Field>
                             <Label>Image:</Label>
                             <Input 
                                 name="image"
                                 value={form?.image}
-                                placeholder='image.jpg'
+                                placeholder="image.jpg"
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
 
                         <div className="buttons is-left">
                             <Button className="is-primary">Submit</Button> 
-                            <Link to="/location"> <Button className="is-light">Cancel</Button> </Link>
+                            <Link to="/location">
+                                <Button className="is-light">Cancel</Button>
+                            </Link>
                         </div>
-
                     </form>
             </Box>
         </div>

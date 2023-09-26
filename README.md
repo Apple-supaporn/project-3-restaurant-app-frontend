@@ -2,13 +2,13 @@
 This restaurant web application makes it easy for restaurant owner to create and update their restaurant profiles and menus to showcase delicious food and connect with customers.
 
 ## Screenshot
-### Landing Page
+#### Landing Page
 ![Landing Page](public/assets/images/restaurant-1.png)
 
-### Menu Page
+#### Menu Page
 ![Menu Page](public/assets/images/restaurant-2.png)
 
-### Create a New Menu Page
+#### Create a New Menu Page
 ![Create a New Menu Page](public/assets/images/restaurant-3.png)
 
 ## Technologies Used
