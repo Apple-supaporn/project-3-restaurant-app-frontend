@@ -24,9 +24,10 @@ const Home = () => {
                                 color: 'white',
                                 // padding: '3rem',
                                 paddingTop: "5%",
-                                textAlign: 'center'
+                                textAlign: 'center',
+                                // fontSize: '50px'
                             }}>
-                                <a>EAT  ENJOY  REPEAT</a>
+                                <div className="eat-enjoy-repeat">EAT  ENJOY  REPEAT</div>
                                 <div className="see-menu-button">
                                     <Link to="/menu" className="button is-light">SEE MENU</Link>
                                 </div>

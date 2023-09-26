@@ -1,27 +1,15 @@
-/* .custom-container {
-    background-color: rgb(255, 105, 105);
-    color: goldenrod;
-    font-weight: bold;
-
-} */
-
 .hero {
-    /* font-size: 100px; */
     font-size: 2rem; 
 }
-
-/* .hero div {
-    position: relative;
-    border: 3px solid #73AD21;
-} */
-
 
 .home-info1 p {
     font-size: 30px;
 }
+
 .home-info2 p {
     font-size: 30px;
 }
+
 /* INTRO */
 .home-info1 {
     background-color: rgb(241, 241, 241);
@@ -35,44 +23,54 @@
 }
 
 .see-menu-button a {
-    font-size: 20px;
-    
+    font-size: 20px; 
 }
 
 .text-center h5 {
     margin-bottom: 10px; 
     font-weight: bold;
-  }
+}
 
+.eat-enjoy-repeat {
+    font-size: 115px;
+    margin-bottom: 20px;
+    margin-top: -25px;
+}
+
+.show-centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
 
 @media (max-width: 700px) {
     .hero div {
-        /* font-size: 30px;  */
         font-size: 2rem; 
-
     }
-    .home-info1 p, .home-info2 p, .see-menu-button a, .text-center p, .text-center h5  {
+
+    .home-info1 p, .home-info2 p, .text-center p {
         font-size: 16px;
     }
 
     .text-center h5 {
-        /* border-bottom: 1px solid goldenrod;  */
         margin-bottom: 1px;
         margin-top: 15px;
-
-      }
-      .see-menu-button a {
-        font-size: 12px;
-        
+        font-size: 16px;
     }
+    
+    .see-menu-button a {
+        font-size: 10px; 
+    }
+
+    .eat-enjoy-repeat {
+        margin-bottom: 0px;
+        margin-top: -17px;
+    }
+
 }
 
-/* @media (min-width: 700px) {
-    .custom-container {
-        top: 5rem !important; */
-        /* top: 300px !important;
-    }
-} */
 
 
 
