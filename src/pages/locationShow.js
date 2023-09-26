@@ -1,12 +1,12 @@
-import {useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import {Card, Box, Form, Button} from 'react-bulma-components'
+import { Box, Form, Button } from 'react-bulma-components'
 import LocationCard from '../components/LocationCard'
 
 
 const ShowLocation = (props) => {
     const navigate = useNavigate()
-    const params = useParams() //can use /:id now
+    const params = useParams()
     const id = params.id
     const location = props.location
     const locationItem = location?.find((p) => p._id === id) 
@@ -20,7 +20,6 @@ const ShowLocation = (props) => {
         image:""
       }
     
-    //State form data and edit mode
     const [form, setForm] = useState(newForm)
     const [editing, setEditing] = useState(false);
     const {Input, Field, Label} = Form;
@@ -40,7 +39,8 @@ const ShowLocation = (props) => {
 
 
     const handleEdit = () => {
-        setEditing(true);  //toggles the edit state when user click edit
+        setEditing(true);  
+        //toggles the edit state when user click edit
       };
 
     //handle form for updating
@@ -50,7 +50,6 @@ const ShowLocation = (props) => {
         setForm(newForm)
         setEditing(false);
         navigate(`/location/${id}`) 
-        //optional direct where you want
     }
 
     const removeLocation = (e) => {
@@ -120,7 +119,7 @@ const ShowLocation = (props) => {
                         <Button color="primary">
                             Submit
                         </Button>
-
+                        {" "}
                         <Button color="danger" onClick={removeLocation}>
                             Delete
                         </Button>

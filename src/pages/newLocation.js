@@ -1,18 +1,13 @@
-// import {useState} from 'react'
-// import {Card, Box, Form, Button} from 'react-bulma-components'
 import LocationForm from "../components/LocationForm"
 
 
 const NewLocation = (props) => {
     return (
-        <>
-            {/* <Button color="red" >
-                Createnjknkjnkjkjnhkj
-            </Button> */}
+        <div>
             <section>
-            <LocationForm createLocation={props.createLocation}/>
+                <LocationForm createLocation={props.createLocation}/>
             </section>
-        </>
+        </div>
     )
 }
 

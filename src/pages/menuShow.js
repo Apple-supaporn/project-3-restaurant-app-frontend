@@ -1,12 +1,12 @@
-import {useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import {Card, Box, Form, Button} from 'react-bulma-components'
+import { Box, Form, Button } from 'react-bulma-components'
 import MenuCard from '../components/MenuCard'
 
 
 const Show = (props) => {
     const navigate = useNavigate()
-    const params = useParams() //can use /:id now
+    const params = useParams()
     const id = params.id
     const menu = props.menu
     const menuItem = menu?.find((p) => p._id === id) 
@@ -36,10 +36,9 @@ const Show = (props) => {
         setForm({...form, [e.target.name]: e.target.value })
     }
 
-
-
     const handleEdit = () => {
-        setEditing(true);  //toggles the edit state when user click edit
+        setEditing(true);  
+        //toggles the edit state when user click edit
       };
 
     //handle form for updating
@@ -111,7 +110,7 @@ const Show = (props) => {
                         <Button color="primary">
                             Submit
                         </Button>
-
+                        {" "}
                         <Button color="danger" onClick={removeMenu}>
                             Delete
                         </Button>

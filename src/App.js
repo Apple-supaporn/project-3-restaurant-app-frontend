@@ -1,12 +1,11 @@
 import './App.css'
 import 'bulma/css/bulma.min.css' 
-//from this https://couds.github.io/react-bulma-components/?path=/story/welcome--page
 
 //IMPORT ALL COMPONENTS
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Main from './components/Main'
-// import { Route, Routes } from 'react-router-dom'
+
 
 //IMPORT ALL PAGES
 // import About from './pages/About'
