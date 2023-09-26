@@ -61,7 +61,9 @@ const ShowLocation = (props) => {
 
     return (
         <div>
+            <div className="show-centered-container">
             <LocationCard location={locationItem}/>
+            </div>
             <section>
             <Box className="form-box">
                     <h2 className="is-size-3 has-font-weight-bold">Edit location </h2>

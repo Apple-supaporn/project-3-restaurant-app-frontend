@@ -12,7 +12,7 @@ const MenuCard = (props) => {
     //   };
     
     return (    
-        <Card className="column is-4" textAlign='center' >
+        <Card className="column is-3" textAlign='center'>
             <Card.Content>
                 <Card.Header.Title class='is-size-4' style={{ fontWeight: 'bold' }}>
                     
