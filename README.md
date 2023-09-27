@@ -1,4 +1,4 @@
-# [Patxi's Pizza | MERN-stack and Full CRUD](https://patxispizza.netlify.app){:target="_blank" rel="noopener"}
+# [Patxi's Pizza | MERN-stack and Full CRUD](https://patxispizza.netlify.app)
 This restaurant web application makes it easy for restaurant owner to create and update their restaurant profiles and menus to showcase delicious food and connect with customers.
 
 ## Screenshot
@@ -18,7 +18,7 @@ This restaurant web application makes it easy for restaurant owner to create and
 - Node
 
 ## Getting Started
-To access the deployed version of our restaurant web application, simply click on the following link: [Restaurant Web Application](https://patxispizza.netlify.app){:target="_blank"}
+To access the deployed version of our restaurant web application, simply click on the following link: [Restaurant Web Application](https://patxispizza.netlify.app)
 
 Exploring the Features :-
 Our restaurant web application allows you to perform the following actions:
@@ -27,7 +27,7 @@ Our restaurant web application allows you to perform the following actions:
 - Create a New Location
 
 Project Planning :-
-If you're interested in learning more about the planning and development process of this application, you can check out our [Trello board](https://trello.com/b/EFES3mM3/restaurant-project-3){:target="_blank"}
+If you're interested in learning more about the planning and development process of this application, you can check out our [Trello board](https://trello.com/b/EFES3mM3/restaurant-project-3)
 
 ## Next Steps
 - Owner Authentication, this system ensures that only the owner can sign in and access or update their restaurant's information.
