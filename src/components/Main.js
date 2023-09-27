@@ -115,7 +115,7 @@ const Main = (props) => {
     return (
         <main>
             <Routes>
-                <Route exact path="/" component={< Home />}/>
+                <Route exact path="/" element={< Home />}/>
                 <Route exact path="/home" element={<Home />}/>
                 <Route exact path="/menu/new" element={<NewMenu createMenu={createMenu}/>} />
                 <Route exact path="/menu" element={<Menu menu={menu} />}/>
