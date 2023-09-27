@@ -1,4 +1,4 @@
-# [Restaurant app | MERN-stack and Full CRUD](https://651261237a23ae0008a84474--rainbow-hotteok-68b1d6.netlify.app/home)
+# [Restaurant app | MERN-stack and Full CRUD](https://rainbow-hotteok-68b1d6.netlify.app)
 This restaurant web application makes it easy for restaurant owner to create and update their restaurant profiles and menus to showcase delicious food and connect with customers.
 
 ## Screenshot
@@ -18,7 +18,7 @@ This restaurant web application makes it easy for restaurant owner to create and
 - Node
 
 ## Getting Started
-To access the deployed version of our restaurant web application, simply click on the following link: [Restaurant Web Application](https://651261237a23ae0008a84474--rainbow-hotteok-68b1d6.netlify.app/home)
+To access the deployed version of our restaurant web application, simply click on the following link: [Restaurant Web Application](https://rainbow-hotteok-68b1d6.netlify.app)
 
 Exploring the Features :-
 Our restaurant web application allows you to perform the following actions:
