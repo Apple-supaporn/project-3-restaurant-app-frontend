@@ -69,7 +69,7 @@ const LocationForm = (props) => {
                             <Input 
                                 name="phone"
                                 value={form?.phone}
-                                placeholder="(999)999-9999"
+                                placeholder="999-999-9999"
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -77,7 +77,7 @@ const LocationForm = (props) => {
                             <Input 
                                 name="hours"
                                 value={form?.hours}
-                                placeholder="Sunday-Thursday: 11 am to 9 pm Friday-Saturday: 11 am to 10 pm"
+                                placeholder="Sunday-Thursday: 11 am to 9 pm Friday-Saturday: 11 am to 9 pm"
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>

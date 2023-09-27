@@ -20,7 +20,7 @@ function Footer() {
           <Col xs={12} md={4} className="text-center">
             <h5>- Opening Hours -<br/>(all locations)</h5>
             <p>Sunday-Thursday: 11 am to 9 pm </p>
-            <p>Friday-Saturday: 11 am to 9 pm</p>
+            <p>Friday-Saturday: 11 am to 10 pm</p>
           </Col>
           <Col xs={12} md={4} className="text-center">
             <h5>- Follow Us -</h5>
