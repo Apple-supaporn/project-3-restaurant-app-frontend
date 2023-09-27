@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 
 
 function Header() {
-  const headerStyle = { backgroundColor: 'rgb(255, 196, 0)',}
+  const headerStyle = { backgroundColor: 'rgb(255, 196, 0)'}
+  const linkStyle = { marginRight: '10px' };
+  
   return (
     <div>
       <Navbar style={headerStyle} className='sticky-top'>
@@ -19,11 +21,11 @@ function Header() {
             />
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Link to="/home">Home</Link>
-            <Link to="/location">Locations</Link>
-            <Link to="/menu">Menu</Link>
-            <Link to="/menu/new">Create New Menu</Link>
-            <Link to="/location/new">Create New Location</Link>
+            <Link to="/home" style={linkStyle}>Home</Link>
+            <Link to="/location" style={linkStyle}>Locations</Link>
+            <Link to="/menu" style={linkStyle}>Menu</Link>
+            <Link to="/menu/new" style={linkStyle}>Create New Menu</Link>
+            <Link to="/location/new" style={linkStyle}>Create New Location</Link>
           </Nav>
         </Container>
       </Navbar>
