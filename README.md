@@ -1,4 +1,4 @@
-# [Patxi's Pizza | MERN-stack and Full CRUD](https://patxispizza.netlify.app){:target="_blank"}
+# [Patxi's Pizza | MERN-stack and Full CRUD](https://patxispizza.netlify.app){:target="_blank" rel="noopener"}
 This restaurant web application makes it easy for restaurant owner to create and update their restaurant profiles and menus to showcase delicious food and connect with customers.
 
 ## Screenshot
