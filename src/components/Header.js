@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 
 function Header() {
@@ -18,11 +19,11 @@ function Header() {
             />
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/location">Locations</Nav.Link>
-            <Nav.Link href="/menu">Menu</Nav.Link>
-            <Nav.Link href="/menu/new">Create New Menu</Nav.Link>
-            <Nav.Link href="/location/new">Create New Location</Nav.Link>
+            <Link to="/home">Home</Link>
+            <Link to="/location">Locations</Link>
+            <Link to="/menu">Menu</Link>
+            <Link to="/menu/new">Create New Menu</Link>
+            <Link to="/location/new">Create New Location</Link>
           </Nav>
         </Container>
       </Navbar>
