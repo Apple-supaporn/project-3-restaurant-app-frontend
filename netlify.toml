@@ -1,3 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "https://rainbow-hotteok-68b1d6.netlify.app/"
+  to = "/index.html"
+  status = 200
