@@ -16,6 +16,7 @@ This restaurant web application makes it easy for restaurant owner to create and
 - Express
 - React
 - Node
+- Netlify
 
 ## Getting Started
 To access the deployed version of our restaurant web application, simply click on the following link: [Restaurant Web Application](https://patxispizza.netlify.app)
