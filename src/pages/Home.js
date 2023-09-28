@@ -7,7 +7,7 @@ const Home = () => {
         <div className="home-grid">
             <section className="hero">
                 <div style={{ position: 'relative' }}>
-                    <img src="https://images.unsplash.com/photo-1634629377376-6c6bae2d8bcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80" alt="pizza1"/>
+                    <img src="../assets/images/home-pizza1.avif" alt="pizza1"/>
                     <div
                         className="is-flex"
                             style={{
@@ -42,7 +42,7 @@ const Home = () => {
                 </div>
                 <div class="home-info">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1646656352194-7db15ee021bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="pizza2" />
+                        <img src="../assets/images/home-pizza3.avif" alt="pizza3" />
                     </div>
                 </div>
 

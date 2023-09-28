@@ -38,7 +38,7 @@ const Show = (props) => {
 
     const handleEdit = () => {
         setEditing(true);  
-        //toggles the edit state when user click edit
+    //toggles the edit state when user click edit
       };
 
     //handle form for updating

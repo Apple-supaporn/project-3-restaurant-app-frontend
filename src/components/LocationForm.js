@@ -21,7 +21,7 @@ const LocationForm = (props) => {
     const [form, setForm] = useState(location)
     const { Input, Field, Label } = Form
 
-    //handleChange function for the form - each keypress is an event we need to update state with
+
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })
     }
@@ -31,7 +31,7 @@ const LocationForm = (props) => {
         e.preventDefault()
         props.createLocation(form)
         setForm(newForm)
-        // optional direct where you want
+    // optional direct where you want
         navigate("/location")
     }
 
@@ -69,7 +69,7 @@ const LocationForm = (props) => {
                             <Input 
                                 name="phone"
                                 value={form?.phone}
-                                placeholder="(999)999-9999"
+                                placeholder="999-999-9999"
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>
@@ -77,7 +77,7 @@ const LocationForm = (props) => {
                             <Input 
                                 name="hours"
                                 value={form?.hours}
-                                placeholder="Sunday-Thursday: 11 am to 9 pm Friday-Saturday: 11 am to 10 pm"
+                                placeholder="Sunday-Thursday: 11 am to 9 pm Friday-Saturday: 11 am to 9 pm"
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         <Field>

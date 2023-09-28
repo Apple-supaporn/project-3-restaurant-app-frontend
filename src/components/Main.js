@@ -18,6 +18,8 @@ const Main = (props) => {
     const menuURL = `${URL}/menu`
     const locationURL = `${URL}/restaurant`
 
+
+    //Menu Functions below
     const getMenu = async () => {
         try {
             const response = await fetch(menuURL)
@@ -66,13 +68,13 @@ const Main = (props) => {
         getMenu()
     }, [])
 
-    // Location Functions below /////////////////////////////////
+
+    //Location Functions below
     const getLocation = async () => {
         try {
             const response = await fetch(locationURL)
             const data = await response.json()
             console.log(data)
-            // setLocation(data)
             setLocation(data.data)
         } catch (error) {
         console.error('Error fetching location data:', error);
@@ -115,18 +117,17 @@ const Main = (props) => {
     return (
         <main>
             <Routes>
-                <Route exact path="/" element={< Home />}/>
-                <Route exact path="/home" element={<Home />}/>
-                <Route exact path="/menu/new" element={<NewMenu createMenu={createMenu}/>} />
-                <Route exact path="/menu" element={<Menu menu={menu} />}/>
+                <Route path="/" element={< Home />}/>
+                <Route path="/home" element={<Home />}/>
+                <Route path="/menu/new" element={<NewMenu createMenu={createMenu}/>} />
+                <Route path="/menu" element={<Menu menu={menu} />}/>
                 <Route path="/menu/:id" element={<Show menu={menu} updateMenu={updateMenu} deleteMenu={deleteMenu}/>}/>
-                <Route exact path="/location/new" element={<NewLocation createLocation={createLocation}/>} />
-                <Route exact path="/location" element={<Location location={location} />}/>
+                <Route path="/location/new" element={<NewLocation createLocation={createLocation}/>} />
+                <Route path="/location" element={<Location location={location} />}/>
                 <Route path="/location/:id" element={<ShowLocation location={location} updateLocation={updateLocation} deleteLocation={deleteLocation}/>}/>
             </Routes>
         </main>
     )
-
 }
 
 export default Main
