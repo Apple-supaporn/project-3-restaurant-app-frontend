@@ -36,11 +36,9 @@ const ShowLocation = (props) => {
         setForm({...form, [e.target.name]: e.target.value })
     }
 
-
-
     const handleEdit = () => {
         setEditing(true);  
-        //toggles the edit state when user click edit
+    //toggles the edit state when user click edit
       };
 
     //handle form for updating

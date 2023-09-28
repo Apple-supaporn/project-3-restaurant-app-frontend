@@ -21,7 +21,7 @@ const LocationForm = (props) => {
     const [form, setForm] = useState(location)
     const { Input, Field, Label } = Form
 
-    //handleChange function for the form - each keypress is an event we need to update state with
+
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })
     }
@@ -31,7 +31,7 @@ const LocationForm = (props) => {
         e.preventDefault()
         props.createLocation(form)
         setForm(newForm)
-        // optional direct where you want
+    // optional direct where you want
         navigate("/location")
     }
 
