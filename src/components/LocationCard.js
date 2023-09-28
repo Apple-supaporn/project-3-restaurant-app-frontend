@@ -16,7 +16,7 @@ const LocationCard = (props) => {
                 <Card.Content>
                     {locationItem?.address} 
                     <br /><br />
-                    <p>- {locationItem?.phone} -</p>
+                    <p> {locationItem?.phone} </p>
                     {locationItem?.hours} 
                     <br /><br />
                     {locationItem?.description} 
