@@ -27,7 +27,7 @@ const Main = (props) => {
             console.log(data)
             setMenu(data.data)
         } catch (error) {
-        console.error('Error fetching menu data:', error);
+        console.error('Error fetching menu data:', error)
         }
     }
 
@@ -77,7 +77,7 @@ const Main = (props) => {
             console.log(data)
             setLocation(data.data)
         } catch (error) {
-        console.error('Error fetching location data:', error);
+        console.error('Error fetching location data:', error)
         }
     }
 
