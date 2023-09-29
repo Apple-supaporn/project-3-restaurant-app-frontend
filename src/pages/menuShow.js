@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Box, Form, Button } from 'react-bulma-components'
 import MenuCard from '../components/MenuCard'
+import "../App.css"
 
 
 const Show = (props) => {
@@ -21,15 +22,15 @@ const Show = (props) => {
     
     //State form data and edit mode
     const [form, setForm] = useState(newForm)
-    const [editing, setEditing] = useState(false);
-    const {Input, Field, Label} = Form;
+    const [editing, setEditing] = useState(false)
+    const {Input, Field, Label} = Form
 
     //Effect to update the form data when menuItem changes
     useEffect(() => {
         if (menuItem) {
-          setForm(menuItem);
+          setForm(menuItem)
         }
-      }, [menuItem]);
+      }, [menuItem])
 
     //handleChange function - Update the form state on each input change
     const handleChange = (e) => { 
@@ -37,16 +38,16 @@ const Show = (props) => {
     }
 
     const handleEdit = () => {
-        setEditing(true);  
+        setEditing(true)
     //toggles the edit state when user click edit
-      };
+      }
 
     //handle form for updating
     const handleSubmit = async (e) => {
         e.preventDefault()
         await props.updateMenu(form, id)
         setForm(newForm)
-        setEditing(false);
+        setEditing(false)
         navigate(`/menu/${id}`) 
         //optional direct where you want
     }
@@ -59,11 +60,19 @@ const Show = (props) => {
 
     return (
         <div>
-            <div className="show-centered-container">
+            <div 
+            style={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                backgroundColor: 'rgb(255, 255, 255)', 
+                marginTop: '10px', 
+                }}>
             <MenuCard menu={menuItem}/>
             </div>
             <section>
-            <Box className="form-box">
+                <Box className="form-box">
                     <h2 className="is-size-3 has-font-weight-bold">Edit menu </h2>
                     <form onSubmit={handleSubmit}>
                         <Field>
@@ -107,13 +116,9 @@ const Show = (props) => {
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         
-                        <Button color="primary">
-                            Submit
-                        </Button>
+                        <Button color="primary"> Submit </Button>
                         {" "}
-                        <Button color="danger" onClick={removeMenu}>
-                            Delete
-                        </Button>
+                        <Button color="danger" onClick={removeMenu}> Delete </Button>
                     </form>
                 </Box>
             </section>

@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { Box, Form, Button } from 'react-bulma-components'
 import { Link } from "react-router-dom";
+import "../App.css"
 
 
 const MenuForm = (props) => {
@@ -18,7 +19,7 @@ const MenuForm = (props) => {
       }
     
     const [form, setForm] = useState(menu)
-    const { Input, Field, Label } = Form;
+    const { Input, Field, Label } = Form
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })

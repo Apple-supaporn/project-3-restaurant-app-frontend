@@ -1,7 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { Box, Form, Button } from 'react-bulma-components'
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import "../App.css"
 
 
 const LocationForm = (props) => {

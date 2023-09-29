@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Box, Form, Button } from 'react-bulma-components'
 import LocationCard from '../components/LocationCard'
+import "../App.css"
 
 
 const ShowLocation = (props) => {
@@ -21,15 +22,15 @@ const ShowLocation = (props) => {
       }
     
     const [form, setForm] = useState(newForm)
-    const [editing, setEditing] = useState(false);
-    const {Input, Field, Label} = Form;
+    const [editing, setEditing] = useState(false)
+    const {Input, Field, Label} = Form
 
     //Effect to update the form data when locationItem changes
     useEffect(() => {
         if (locationItem) {
-          setForm(locationItem);
+          setForm(locationItem)
         }
-      }, [locationItem]);
+      }, [locationItem])
 
     //handleChange function - Update the form state on each input change
     const handleChange = (e) => { 
@@ -37,16 +38,16 @@ const ShowLocation = (props) => {
     }
 
     const handleEdit = () => {
-        setEditing(true);  
+        setEditing(true)
     //toggles the edit state when user click edit
-      };
+      }
 
     //handle form for updating
     const handleSubmit = async (e) => {
         e.preventDefault()
         await props.updateLocation(form, id)
         setForm(newForm)
-        setEditing(false);
+        setEditing(false)
         navigate(`/location/${id}`) 
     }
 
@@ -58,11 +59,20 @@ const ShowLocation = (props) => {
 
     return (
         <div>
-            <div className="show-centered-container">
-            <LocationCard location={locationItem}/>
+            <div 
+                style={{ 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    backgroundColor: 'rgb(255, 255, 255)', 
+                    marginTop: '10px',
+                }}>
+                <LocationCard location={locationItem}/>
             </div>
+
             <section>
-            <Box className="form-box">
+                <Box className="form-box">
                     <h2 className="is-size-3 has-font-weight-bold">Edit location </h2>
                     <form onSubmit={handleSubmit}>
                         <Field>
@@ -114,13 +124,9 @@ const ShowLocation = (props) => {
                                 onChange={(e)=>{handleChange(e)}}/>
                         </Field>
                         
-                        <Button color="primary">
-                            Submit
-                        </Button>
+                        <Button color="primary"> Submit </Button>
                         {" "}
-                        <Button color="danger" onClick={removeLocation}>
-                            Delete
-                        </Button>
+                        <Button color="danger" onClick={removeLocation}> Delete </Button>
                     </form>
                 </Box>
             </section>
