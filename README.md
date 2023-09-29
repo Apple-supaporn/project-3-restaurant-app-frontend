@@ -6,7 +6,7 @@ This restaurant web application makes it easy for restaurant owner to create and
 ![Landing Page](public/assets/images/restaurant-1.png)
 
 #### Menu Page
-![Menu Page](public/assets/images/restaurant-2.png)
+![Menu Page](public/assets/images/restaurant-4.png)
 
 #### Create a New Menu Page
 ![Create a New Menu Page](public/assets/images/restaurant-3.png)
@@ -23,7 +23,8 @@ To access the deployed version of our restaurant web application, simply click o
 
 Exploring the Features :-
 Our restaurant web application allows you to perform the following actions:
-- View the Menus
+- View the Menus and locations
+- Browse Menu Categories
 - Create a New Menu
 - Create a New Location
 
@@ -34,6 +35,5 @@ If you're interested in learning more about the planning and development process
 - Owner Authentication, this system ensures that only the owner can sign in and access or update their restaurant's information.
 - Create a gallery page to display pictures of restaurant's food and ambiance.
 - Improve the website design to make it more enjoyable for users.
-- Add menu sections like 'Starters', 'Salads', 'Main Courses', 'Kids Menu', 'Desserts' and 'Beverages' to make it easier for customers to find what they want on the menu.
 
 Your contributions and ideas are always welcome!
