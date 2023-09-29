@@ -1,6 +1,6 @@
-import { Content, Button } from "react-bulma-components"
-import { Link } from "react-router-dom"
+import { Content } from "react-bulma-components"
 import LocationCard from "../components/LocationCard"
+import "../App.css"
 
 
 const Location = (props) => {

@@ -11,5 +11,4 @@ const NewLocation = (props) => {
     )
 }
 
-
 export default NewLocation
