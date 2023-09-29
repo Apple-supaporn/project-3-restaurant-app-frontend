@@ -6,10 +6,10 @@ This restaurant web application makes it easy for restaurant owner to create and
 ![Landing Page](public/assets/images/restaurant-1.png)
 
 #### Menu Page
-![Menu Page](public/assets/images/restaurant-4.png)
+![Menu Page](public/assets/images/restaurant-2.png)
 
 #### Create a New Menu Page
-![Create a New Menu Page](public/assets/images/restaurant-3.png)
+![Create a New Menu Page](public/assets/images/restaurant-5.png)
 
 ## Technologies Used
 - MongoDB/Mongoose
