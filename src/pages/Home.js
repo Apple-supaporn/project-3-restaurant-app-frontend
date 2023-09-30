@@ -46,7 +46,7 @@ const Home = () => {
                         <p>
                             Specializing in organic wood-fired cuisine, we serve straightforward 
                             food created with seasonal ingredients sourced from local farms and 
-                            purveyors.
+                            suppliers.
                         </p>
                     </div>
                 </div>
