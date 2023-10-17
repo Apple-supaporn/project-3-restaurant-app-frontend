@@ -19,6 +19,8 @@ This restaurant web application makes it easy for restaurant owner to create and
 - Netlify
 
 ## Getting Started
+For the backend repository of the Restaurant Web Application, click [HERE](https://github.com/Apple-supaporn/project-3-restaurant-app-backend)
+
 To access the deployed version of our restaurant web application, simply click on the following link: [Restaurant Web Application](https://patxispizza.netlify.app)
 
 Exploring the Features :-
